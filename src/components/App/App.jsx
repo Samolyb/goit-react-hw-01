@@ -4,7 +4,7 @@ import userData from "../../userData.json";
 
 export default function App() {
     return (
-        <>
+        <main>
             <Profile
                 name={userData.username}
                 tag={userData.tag}
@@ -12,7 +12,7 @@ export default function App() {
                 image={userData.avatar}
                 stats={userData.stats}
             />
-        </>
+        </main>
     );
 }
 

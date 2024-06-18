@@ -25,7 +25,7 @@ img {
     max-width: 100%;
 }
 
-/* main {
+main {
     background-color: rgb(171, 184, 193);
     padding: 8px 32px;
     display: flex;
@@ -33,4 +33,4 @@ img {
     flex-direction: column;
     justify-content: space-between;
 
-} */
+}
