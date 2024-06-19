@@ -1,39 +1,40 @@
 import css from "./Profile.module.css";
+import clsx from "clsx";
 
 export default function Profile({ name, tag, location, image, stats }) {
     return (
         <div className={css.container} >
-            <div className={css.mainContainer}>
-                <div className={css.containerProfile}>
+            <div className={clsx(css.mainContainer)}>
+                <div className={clsx(css["containerProfile"])}>
                     <img
                         src={image}
                         alt="User avatar"
-                        className={css.profileImg}
+                        className={clsx(css["profileImg"])}
                     />
-                    <p className={css.profilePrimaryParagraf}>{name}</p>
-                    <p className={(
+                    <p className={clsx(css.profilePrimaryParagraf)}>{name}</p>
+                    <p className={clsx(
                         css.profilePrimaryParagraf,
                         css.profileSecondaryParagraf
                     )}>@{tag}</p>
-                    <p className={(
+                    <p className={clsx(
                         css.profilePrimaryParagraf,
                         css.profileSecondaryParagraf
                     )}>{location}</p>
                 </div>
 
 
-                <ul className={css.listItem}>
-                    <li className={css.item}>
-                        <span className={(css.profilePrimaryParagraf, css.stats)}>Followers</span>
-                        <span>{stats.followers}</span>
+                <ul className={clsx(css.listItem)}>
+                    <li className={clsx(css.item)}>
+                        <span className={clsx(css.profilePrimaryParagraf, css.stats)}>Followers</span>
+                        <span className={clsx(css.profilePrimaryParagraf)}>{stats.followers}</span>
                     </li>
-                    <li className={css.item}>
-                        <span>Views</span>
-                        <span>{stats.views}</span>
+                    <li className={clsx(css.item)}>
+                        <span className={clsx(css.profilePrimaryParagraf, css.stats)}>Views</span>
+                        <span className={clsx(css.profilePrimaryParagraf)}>{stats.views}</span>
                     </li>
-                    <li className={css.item}>
-                        <span>Likes</span>
-                        <span>{stats.likes}</span>
+                    <li className={clsx(css.item)}>
+                        <span className={clsx(css.profilePrimaryParagraf, css.stats)}>Likes</span>
+                        <span className={clsx(css.profilePrimaryParagraf)}>{stats.likes}</span>
                     </li>
                 </ul>
             </div>
