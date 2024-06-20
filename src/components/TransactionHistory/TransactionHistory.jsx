@@ -1,5 +1,6 @@
 import React from 'react';
 import css from "./Transaction.module.css"
+import TransactionItem from '../TransactionHistoryItem/TransactionHistoriItem';
 import clsx from "clsx";
 
 
@@ -27,13 +28,3 @@ export default function TransactionHistory({ items }) {
         </table>
     );
 }
-
-const TransactionItem = ({ type, amount, currency }) => {
-    return (
-        <>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
-        </>
-    );
-};
